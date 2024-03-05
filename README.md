@@ -1,13 +1,13 @@
 # oop-project
 
-- application The Lengend of AFC Predictino
+- application: Converter app
 - author: 
   * id: 66114540102
   * name: Kittiphong U-sa
 - technology:
   * Streamlit
 - application description:
-  * DISPLAY AND FILTER THE AFC ASIAN CUP THROUGHOUT THE YEAR FROM ITS START TO THE CURRENT YEAR AND PREDICTION RESULTS FOR THE NEXT MATCH.
+  * แปลงเลขฐานของคอมพิวเตอร์ สามารถแปลงได้ตั้งแต่ 2 - 16
 
-- presentation: [slide/canva/etc..] link [public/ubu]
+- presentation: ![Slide](https://www.canva.com/design/DAF-iiYWMmo/wTkrQWWHxRVffLjFs-j4Fw/edit?utm_content=DAF-iiYWMmo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 - video: link [public/ubu]

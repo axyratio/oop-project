@@ -35,14 +35,7 @@ class Component:
 
         # return markdown tag
         def create_clickable_link(text, key):
-            url = "https://oop-project.streamlit.app/"  # Replace with the actual URL you are checking against
-
-            # Check if the domain matches the specified URL
-            if self.get_domain(url) == "oop-project.streamlit.app":
-                link = f'https://oop-project.streamlit.app/ConvertBase/?convert_from={key}'
-            else:
-                link = f'http://localhost:8501/ConvertBase/?convert_from={key}'
-
+            link = f'http://localhost:8501/ConvertBase/?convert_from={key}'
             # Create a clickable link
             return f"[{text}]({link})"
 

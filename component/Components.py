@@ -1,8 +1,6 @@
 import streamlit as st
 from component.BaseConverter import BaseConverter
-import pytesseract as tess
 
-tess.pytesseract.tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe'
 
 
 class Component:
@@ -57,17 +55,8 @@ class Component:
             st.markdown("<br>".join(link2), unsafe_allow_html=True)
             st.markdown("<br>".join(link3), unsafe_allow_html=True)
             
-            
-            
-        
-    # def from_base(self):
-    #     from_base = st.number_input("From base:", min_value=2, max_value=16, format="%d")
-    
-    # def to_base(self):
-    #     to_base = st.number_input("To base:", min_value=2, max_value=16, format="%d")
-            
-    def imageToText(self):
-        uploaded_file = st.file_uploader("Upload Base Image", type=["jpg", "jpeg", "png"])
+    # def imageToText(self):
+    #     uploaded_file = st.file_uploader("Upload Base Image", type=["jpg", "jpeg", "png"])
 
         
 

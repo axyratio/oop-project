@@ -12,6 +12,7 @@ class App:
         st.header("Contact me")
         # Correct the HTML syntax for embedding links
         st.markdown("<ul><a href='https://www.facebook.com/12ize12'><li>Facebook me</li></a></ul>", unsafe_allow_html=True)
+        st.markdown("<ul><a href='https://github.com/axyratio'><li>Github</li></a></ul>", unsafe_allow_html=True)
 
     def sidebar(self):
         pass

@@ -1,6 +1,4 @@
 import streamlit as st
-from streamlit_javascript import st_javascript
-from PIL import Image
 from component.Components import Component
 
 class App():

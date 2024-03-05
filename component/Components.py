@@ -35,7 +35,7 @@ class Component:
 
         # return markdown tag
         def create_clickable_link(text, key):
-            link = f'http://oop-project.streamlitssss.app/ConvertBase/?convert_from={key}'
+            link = f'http://oop-project.streamlit.app/ConvertBase/?convert_from={key}'
             # Create a clickable link
             return f"[{text}]({link})"
 

@@ -1,27 +1,34 @@
+import streamlit as st
+
 class BaseConverter:
+    # กำหนดค่าเริ่มต้นใน object ด้วยพารามิเตอร์ที่รับมา
     def __init__(self, number, from_base, to_base):
         self.number = number
         self.from_base = from_base
         self.to_base = to_base
     
-    def convert(self):
-        # แปลงจาก decimal ไป base ที่ target
-        decimal_number = self.to_decimal(self.number, self.from_base) #
+    # แปลงเลขจากฐาน from_base เป็น to_base ที่รับมาจากผู้ใช้
+    def getBaseResult(self):
+        from_base = self.decimal(self.number, self.from_base) # แปลงเป็นเลขฐานสิบ
         if self.to_base == 10:
-            return str(decimal_number)
+            # ถ้า base ที่รับจากผู้ใช้ 10 ให้คืนค่าเลขทศนิยมเป็นสตริง
+            return str(from_base)
         else:
-            return self.from_decimal(decimal_number, self.to_base)
-
+            # นอกเหนือ ทำการแปลงเลขทศนิยมไปยัง base ปลายทาง
+            return self.convert(from_base, self.to_base)
+        
+    """แปลงเลขจาก base ที่กำหนดไว้เป็นเลขฐานสิบ (decimal)"""
     @staticmethod
-    def to_decimal(number, base):
-        """Converts a number from a given base to decimal (base 10)."""
+    def decimal(number, base):
         return int(number, base)
 
+    """แปลงเลขทศนิยม (เลขฐานสิบ) ไปยัง base ที่กำหนดไว้"""
     @staticmethod
-    def from_decimal(decimal_number, base):
-        """Converts a decimal number (base 10) to a given base."""
+    def convert(from_base, base):
         digits = "0123456789ABCDEF"
-        if decimal_number < base:
-            return digits[decimal_number]
+        if from_base < base:
+            # ถ้าเลขทศนิยมน้อยกว่า base ปลายทาง ให้คืนค่าเลขหลักเดียวนั้น
+            return digits[from_base]
         else:
-            return BaseConverter.from_decimal(decimal_number // base, base) + digits[decimal_number % base]
+            # เรียกฟังก์ชันเองโดยใช้วิธีทำลำดับถอดเลขฐาน
+            return BaseConverter.convert(from_base // base, base) + digits[from_base % base]

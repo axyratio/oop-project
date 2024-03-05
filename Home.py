@@ -9,7 +9,7 @@ class App:
 
     def home(self):
         st.title("My App")    
-        st.text("This project is very well mak mak")
+        st.text("Convert base numbers Can be converted from 2 - 16")
         st.header("Contact me")
         # Correct the HTML syntax for embedding links
         st.markdown("<ul><a href='https://www.facebook.com/12ize12'><li>Facebook me</li></a></ul>", unsafe_allow_html=True)

@@ -9,9 +9,6 @@ class App():
         cp.inputBase()
         cp.moreBase()
 
-            
-
-
 if __name__ == "__main__":
     app = App()
     app.run()

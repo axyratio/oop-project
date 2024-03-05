@@ -28,7 +28,7 @@ class Component:
 
         # return markdown tag
         def create_clickable_link(text, key):
-            url = f"http://localhost:8501/ConvertBase/?convert_from={key}"
+            url = f"http://localhost:8501/ConvertBase/?convert_from={key}" or "https://oop-project.streamlit.app/ConvertBase/?convert_from={key}"
             return f"[{text}]({url})"
 
         st.write("More to convert:")

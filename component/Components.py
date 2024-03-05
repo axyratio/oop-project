@@ -1,5 +1,7 @@
 import streamlit as st
 from component.BaseConverter import BaseConverter
+from urllib.parse import urlparse
+
 
 class Component:
     # params
@@ -23,13 +25,26 @@ class Component:
                 except ValueError as e:
                     st.error(f"{number} is not in base {from_base}")
 
+    def get_domain(url):
+        # Extract the domain from the URL
+        parsed_url = urlparse(url)
+        return parsed_url.netloc
+    
     # แนะนำเลขฐานอื่นๆ
     def moreBase(self, last_params=None, start_params=None):
 
         # return markdown tag
         def create_clickable_link(text, key):
-            url = f"http://localhost:8501/ConvertBase/?convert_from={key}" or "https://oop-project.streamlit.app/ConvertBase/?convert_from={key}"
-            return f"[{text}]({url})"
+            url = "https://oop-project.streamlit.app/"  # Replace with the actual URL you are checking against
+
+            # Check if the domain matches the specified URL
+            if self.get_domain(url) == "oop-project.streamlit.app":
+                link = f'https://oop-project.streamlit.app/ConvertBase/?convert_from={key}'
+            else:
+                link = f'http://localhost:8501/ConvertBase/?convert_from={key}'
+
+            # Create a clickable link
+            return f"[{text}]({link})"
 
         st.write("More to convert:")
 

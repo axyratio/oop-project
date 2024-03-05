@@ -1,1 +1,3 @@
 .conda/
+pages/__pycache__/
+component/__pycache__/

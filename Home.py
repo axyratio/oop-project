@@ -2,7 +2,6 @@ import streamlit as st
 import os
 
 #page 
-
 class App:
     def __init__(self) -> None:
         pass

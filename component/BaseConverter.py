@@ -28,7 +28,11 @@ class BaseConverter:
         digits = "0123456789ABCDEF"
         if from_base < base:
             # ถ้าเลขทศนิยมน้อยกว่า base ปลายทาง ให้คืนค่าเลขหลักเดียวนั้น
+            print(digits[from_base])
             return digits[from_base]
         else:
             # เรียกฟังก์ชันเองโดยใช้วิธีทำลำดับถอดเลขฐาน
+            # (10 // 2, 2) + 10 % 2 = 0 
             return BaseConverter.convert(from_base // base, base) + digits[from_base % base]
+        
+BaseConverter(1010, 10, 2).convert(10, 2)

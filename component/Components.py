@@ -1,13 +1,18 @@
 import streamlit as st
 from component.BaseConverter import BaseConverter
-from urllib.parse import urlparse
-
+import os
+from dotenv import load_dotenv
+import pandas as pd
 
 class Component:
     # params
     def __init__(self, start_params=2, last_params=2) -> None:
         self.start_params = start_params
         self.last_params = last_params
+
+    def read_url(self):
+        load_dotenv()
+        return os.getenv("url")
     
     # call BaseConverter class to convert that users input.
     def converter(self, number=None, from_base=None, to_base=None, btn_onclick=None):
@@ -25,17 +30,38 @@ class Component:
                 except ValueError as e:
                     st.error(f"{number} is not in base {from_base}")
 
-    def get_domain(url):
-        # Extract the domain from the URL
-        parsed_url = urlparse(url)
-        return parsed_url.netloc
-    
-    # แนะนำเลขฐานอื่นๆ
-    def moreBase(self, last_params=None, start_params=None):
+    def comment(self):
+        st.header("Comment")
+        comment = st.chat_input("Enter your comment:")
+        if comment:
+            try:
+                existing_comments = pd.read_csv("comments.csv")
+            except FileNotFoundError:
+                existing_comments = pd.DataFrame(columns=["Comment"])
 
-        # return markdown tag
+            # Add the new comment to the DataFrame
+            new_comment = pd.DataFrame({"Comment": [comment]})
+            comments_df = pd.concat([existing_comments, new_comment], ignore_index=True)
+
+            # Save the DataFrame to CSV
+            comments_df.to_csv("comments.csv", index=False)
+
+            st.success("Comment saved successfully!")
+
+        # Display existing comments
+        try:
+            existing_comments = pd.read_csv("comments.csv", index_col=False)
+            st.table(existing_comments)
+        except FileNotFoundError:
+            st.info("No comments yet.")
+                
+
+    # แนะนำเลขฐานอื่นๆ
+    def moreBase(self, last_params=None, start_params=None, url=None):
+# http://192.168.100.170:8501
         def create_clickable_link(text, key):
-            link = f'http://oop-project.streamlit.app/ConvertBase/?convert_from={key}'
+            link = f'{self.read_url()}/ConvertBase/?convert_from={key}'
+            # link = f'http://oop-project.streamlit.app/ConvertBase/?convert_from={key}' in deploy
             # Create a clickable link
             return f"[{text}]({link})"
 
@@ -118,6 +144,11 @@ class Component:
             convert_btn = st.button("Convert!")
         with swap:
             swap_btn = st.button("Swap Base")
-        
 
         swapFunc(swap_btn, convert_btn)
+    
+
+
+
+        
+            

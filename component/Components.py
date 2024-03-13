@@ -146,9 +146,12 @@ class Component:
             swap_btn = st.button("Swap Base")
 
         swapFunc(swap_btn, convert_btn)
+<<<<<<< HEAD
     
 
 
 
         
             
+=======
+>>>>>>> a9408e0216e75b6755422e2887db0da2ba2b0de5

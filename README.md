@@ -20,5 +20,5 @@
 - application description:
   * แปลงเลขฐานของคอมพิวเตอร์ สามารถแปลงได้ตั้งแต่ ฐาน 2 - ฐาน 16
 
-- presentation: [Slide](https://www.canva.com/design/DAF-iiYWMmo/wTkrQWWHxRVffLjFs-j4Fw/edit?utm_content=DAF-iiYWMmo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-- video: link [public/ubu]
+- presentation: [Slide Base Converter Project.](https://www.canva.com/design/DAF-iiYWMmo/wTkrQWWHxRVffLjFs-j4Fw/edit?utm_content=DAF-iiYWMmo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+- video: link [Video Base Converter Project.](https://youtu.be/Y-MXCOl4-cY)

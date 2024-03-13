@@ -1,10 +1,8 @@
 # oop-project
-
-
-- application: Converter app
+- project name: Base Converter
   
-  [![Screenshot_2024-03-04_175214-removebg-preview](https://github.com/axyratio/oop-project/assets/159877997/328d63fd-f6c6-4937-9625-adcab9186738)](https://oop-project.streamlit.app/)
-  
+![Screenshot_2024-03-04_175214-removebg-preview (3)](https://github.com/axyratio/oop-project/assets/159877997/b46478d6-dd72-48c1-84ea-69dd61bbb347)
+
 - author: 
   * id: 66114540102
   * name: Kittiphong U-sa

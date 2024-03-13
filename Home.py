@@ -17,13 +17,6 @@ class App:
             st.markdown(f'''<span>Convert base numbers Can be converted from 2 - 16 <a href="{url}/ConvertBase">Click to Project</a></span>''', unsafe_allow_html=True)
             comp.comment()
 
-        st.title("My App")    
-        st.text("Convert base numbers Can be converted from 2 - 16")
-        st.header("Contact me")
-        # Correct the HTML syntax for embedding links
-        st.markdown("<ul><a href='https://www.facebook.com/12ize12'><li>Facebook me</li></a></ul>", unsafe_allow_html=True)
-        st.markdown("<ul><a href='https://github.com/axyratio'><li>Github</li></a></ul>", unsafe_allow_html=True)
-
         with tab2:
             st.header("Contact me")
             st.markdown("<ul><a href='https://www.facebook.com/12ize12'><li>Facebook me</li></a><a href='github.com/axyratio/'><li>Github</li></a></ul>", unsafe_allow_html=True)

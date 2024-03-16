@@ -1,12 +1,12 @@
 # oop-project
 - project name: Base Converter
-  
-![Screenshot_2024-03-04_175214-removebg-preview (3)](https://github.com/axyratio/oop-project/assets/159877997/b46478d6-dd72-48c1-84ea-69dd61bbb347)
 
 - application title:
 
+![Screenshot 2024-03-13 142051](https://github.com/axyratio/oop-project/assets/159877997/84f07431-3f91-46b5-a151-df0b9ad56bb3)
 
-  
+![Screenshot 2024-03-13 142059](https://github.com/axyratio/oop-project/assets/159877997/09f24ecd-09a6-4543-a213-a4b13c92b28a)
+
 - author: 
   * id: 66114540102
   * name: Kittiphong U-sa
@@ -20,5 +20,5 @@
 - application description:
   * แปลงเลขฐานของคอมพิวเตอร์ สามารถแปลงได้ตั้งแต่ ฐาน 2 - ฐาน 16
 
-- presentation: [Slide](https://www.canva.com/design/DAF-iiYWMmo/wTkrQWWHxRVffLjFs-j4Fw/edit?utm_content=DAF-iiYWMmo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-- video: link [public/ubu]
+- presentation: [Slide Base Converter Project.](https://www.canva.com/design/DAF-iiYWMmo/wTkrQWWHxRVffLjFs-j4Fw/edit?utm_content=DAF-iiYWMmo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+- video: link [Video Base Converter Project.](https://youtu.be/Y-MXCOl4-cY)
